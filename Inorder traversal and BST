@@ -1,0 +1,29 @@
+PROBLEM: N = 3
+         arr = {2, 4, 5}
+Output: 1
+
+Explaination: Given arr representing inorder traversal of a BST.
+                      4
+                     / \
+                    2   5              Inoder traversal= 2, 4, 5
+                    
+____________________________________________________________________________________
+|   NOTE: Inoder Traversal in BST always gives sorted elements in ascending order.  |
+|___________________________________________________________________________________|
+                    
+                    
+SOLUTION:
+
+int isRepresentingBST(int arr[], int N)
+    {
+        for(int i=0;i<N-1;i++){
+            if(arr[i]>=arr[i+1])
+                return 0;
+        }
+        return 1;
+    }
+    
+    
+    
+    
+    
