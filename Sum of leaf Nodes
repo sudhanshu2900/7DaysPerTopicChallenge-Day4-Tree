@@ -1,0 +1,34 @@
+PROBLEM: 
+
+              10
+             /  \
+            20   30
+           /  \
+          40   50
+          
+         Sum= 40+50+30=120
+   
+   
+SOLUTION:
+
+
+void findSum(int &sum, Node* root){
+    if(root!=NULL){
+        if(root->left==NULL && root->right==NULL){
+            sum+=(root->data);
+        }
+        findSum(sum, root->left);
+        findSum(sum, root->right);
+    }
+}
+int sumLeaf(Node* root)
+{
+    // Code here
+    int sum=0;
+    findSum(sum, root);
+    return sum;
+}
+
+
+
+
